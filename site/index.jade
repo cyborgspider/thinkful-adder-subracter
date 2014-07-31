@@ -1,0 +1,20 @@
+!!! 5
+html
+  head
+    title Thinkful Adder/Subtracter
+    link(href="css/styles.css", rel="stylesheet")
+
+  body
+    h1 Adder/Subtracter
+    input#input-x(type="text", placeholder="Enter an integer")
+    input#input-y(type="text", placeholder="Enter an integer")
+
+    button.btn.btn-plus(data-operator="add") +
+    button.btn.btn-minus(data-operator="subtract") -
+
+    .error.hide Please use integers
+
+    p <span class="x-value">X</span> <span class="operator">plus/minus</span> <span class="y-value">Y</span> is <span class="z-value">Z</span>
+
+    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
+    script(src="js/scripts.js")
