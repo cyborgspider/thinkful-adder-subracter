@@ -2,16 +2,28 @@
 <html>
   <head>
     <title>Thinkful Adder/Subtracter</title>
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans|Stint+Ultra+Expanded" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Adder/Subtracter</h1>
-    <input id="input-x" type="text" placeholder="Enter an integer">
-    <input id="input-y" type="text" placeholder="Enter an integer">
-    <button data-operator="add" class="btn btn-plus">+</button>
-    <button data-operator="subtract" class="btn btn-minus">-</button>
-    <div class="error hide">Please use integers</div>
-    <p><span class="x-value">X</span> <span class="operator">plus/minus</span> <span class="y-value">Y</span> is <span class="z-value">Z</span></p>
+    <div class="top-bar"></div>
+    <div class="wrap">
+      <h1>Adder/Subtracter</h1>
+      <div class="form-group">
+        <label>X =</label>
+        <input id="input-x" type="text" placeholder="Enter an integer">
+      </div>
+      <div class="form-group">
+        <label>Y =</label>
+        <input id="input-y" type="text" placeholder="Enter an integer">
+      </div>
+      <div class="error"></div>
+      <div class="btn-group">
+        <button data-operator="add" class="btn btn-plus">&#43;</button>
+        <button data-operator="subtract" class="btn btn-minus">&#45;</button>
+      </div>
+      <p><span class="x-value">X</span> <span class="operator">plus/minus</span> <span class="y-value">Y</span> is <span class="z-value">Z</span></p>
+    </div>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
