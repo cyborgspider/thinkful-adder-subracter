@@ -9,40 +9,40 @@ module.exports =function(grunt){
           livereload: true
         },
         js: {
-          files:   ['site/scripts/*.js'],
+          files:   ['src/scripts/*.js'],
           tasks:   ['copy']
         },
         coffee:{
-          files: ['site/scripts/*.coffee'],
+          files: ['src/scripts/*.coffee'],
           tasks: ['coffee']
         },
         css:{
-          files:   ['site/styles/*.styl'],
+          files:   ['src/styles/*.styl'],
           tasks:   ['stylus']
         },
         html:{
-          files:   ['site/*.jade'],
+          files:   ['src/*.jade'],
           tasks:   ['jade']
         }
       },
       coffee:{
         compile: {
             files: {
-              'build/js/scripts-coffee.js': ['site/scripts/scripts-coffee.coffee']
+              'build/js/scripts-coffee.js': ['src/scripts/scripts-coffee.coffee']
             }
           }
       },
       uglify: {
         my_target: {
           files: {
-            'build/js/scripts.min.js': ['site/scripts/scripts.js']
+            'build/js/scripts.min.js': ['src/scripts/scripts.js']
           }
         }
       },
       copy: {
         main: {
           expand: true,
-          cwd: 'site/scripts',
+          cwd: 'src/scripts',
           src: '*',
           dest: 'build/js'
         },
@@ -53,7 +53,7 @@ module.exports =function(grunt){
             import:['nib']
           },
           files: {
-            'build/css/styles.css': ['site/styles/*.styl'] // compile and concat into single file
+            'build/css/styles.css': ['src/styles/*.styl'] // compile and concat into single file
           }
         }
 
@@ -63,7 +63,7 @@ module.exports =function(grunt){
           options: {pretty:true},
           files:[{
             expand: true,
-            cwd:    'site/',
+            cwd:    'src/',
             src:    "*.jade",
             ext:    ".html",
             dest:   "build/"
