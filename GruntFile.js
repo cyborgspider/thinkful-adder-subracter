@@ -69,6 +69,16 @@ module.exports =function(grunt){
             dest:   "build/"
           }]
         }
+      },
+      githubPages: {
+        target: {
+          options: {
+            // The default commit message for the gh-pages branch
+            commitMessage: 'push'
+          },
+          // The folder where your gh-pages repo is
+          src: 'build'
+        }
       }
      });
 
@@ -76,4 +86,5 @@ module.exports =function(grunt){
      //Copy is registered but not executed. Refer to commented code in the initConfig method for details on how to add it.
      grunt.registerTask('default', ['watch', 'uglify', 'coffee', 'stylus', 'jade', 'copy']);
      grunt.registerTask('build', ['uglify', 'coffee', 'stylus','jade', 'copy']);
+     grunt.registerTask('deploy', ['build','githubPages:target']);
 };

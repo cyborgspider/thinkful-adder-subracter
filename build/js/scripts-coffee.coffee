@@ -11,7 +11,7 @@ app =
     z = 0
 
     if x is '' or y is ''
-      errorText.text 'Oops, you forgot to input an integer'
+      errorText.text 'Oops, you forgot to input an integer!'
     else
       if isNaN(x) or isNaN(y)
         errorText.text 'Use integers, not letters or special characters, please'
