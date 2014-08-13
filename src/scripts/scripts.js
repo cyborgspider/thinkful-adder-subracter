@@ -22,15 +22,15 @@
 
     else{
       errorText.text('');
-      x = +(x);
-      y = +(y);
+      x = parseInt(x);
+      y = parseInt(y);
 
-      if (operator === 'add'){
+      if (btnOperator === 'add'){
         operatorText.text('plus');
         z = x+y;
       }
 
-      if (operator === 'subtract'){
+      if (btnOperator === 'subtract'){
         operatorText.text('minus');
         z = x-y;
       }
