@@ -6,7 +6,6 @@
       errorText    = $('.error'),
       operatorText = $('.operator');
 
-
   var addOrSubtract = function(operator){
     var x = $('#input-x').val(),
         y = $('#input-y').val(),
@@ -16,10 +15,11 @@
     if (x === '' || y === ''){
       errorText.text('Oops, you forgot to input an integer!');
     }
-    else if (isNaN(x) || isNaN(y) || (x%1) !== 0 || (y%1 !==0)){
+
+    else if (isNaN(x) || isNaN(y) || (x%1) !== 0 || (y%1) !==0){
       $('.error').text('Use integers, not letters, decimals, or special characters, please');
     }
-    //...otherwise, proceed with calculation functions
+
     else{
       errorText.text('');
       x = +(x);
